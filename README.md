@@ -6,5 +6,5 @@ This command makes a directory and cd's into it at the same time i.e.
 `mkm directory_name`
 
 ## defang
-This command defangs a given URL or IP address by turning any "." into "[.]"
+This command defangs a given URL or IP address by turning any "." into "[.]" i.e. 
 `defang 127.0.0.1`
