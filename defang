@@ -1,0 +1,20 @@
+#$!/bin/bash
+#Bash File that defangs IP addresses
+new_ip=""
+old_ip=$1
+#adds char to the end because while loop doesnt reach end
+old_ip="$old_ip""0"
+i=0
+while [ $i -lt ${#old_ip} ]; do
+	char=$(expr substr "$old_ip" $i 1)
+	if [ "$char" = "." ]
+	then
+		new_ip="${new_ip}""[.]"
+	else
+		new_ip="${new_ip}""$char"
+	fi
+	i=$((i+1))
+done
+
+echo $new_ip
+exit
