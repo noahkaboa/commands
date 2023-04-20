@@ -1,4 +1,4 @@
-#$!/bin/bash
+#!/bin/bash
 #Bash File that defangs IP addresses
 new_ip=""
 old_ip=$1
